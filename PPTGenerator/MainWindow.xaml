@@ -1,0 +1,29 @@
+﻿<Window x:Class="LouvorPPT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PPT Generator" Height="438" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" IsEnabled="True" FontFamily="Calibri" FontSize="12" AllowsTransparency="False" AllowDrop="True" BorderThickness="0" UseLayoutRounding="False" Icon="/PPTGenerator;component/Images/bible-icon.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="482*" />
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="22*" />
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Configuração" Height="100" Margin="28,12,0,0" Name="grbConfiguracao" VerticalAlignment="Top" Foreground="Black" BorderBrush="Black" FontWeight="Bold" FontFamily="Arial" Grid.ColumnSpan="2"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="222,33,0,0" Name="txtTemplate" VerticalAlignment="Top" Width="246" MaxLength="80" FontFamily="Arial" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="222,72,0,0" x:Name="txtDestination" VerticalAlignment="Top" Width="246" MaxLength="80" FontFamily="Arial" />
+        <Label Content="Caminho do modelo (potx):" Height="28" HorizontalAlignment="Left" Margin="40,33,0,0" Name="lblTemplate" VerticalAlignment="Top" FontFamily="Arial" Width="155" />
+        <Label Content="Caminho de destino dos slides:" Height="28" HorizontalAlignment="Left" Margin="40,69,0,0" Name="lblDestino" VerticalAlignment="Top" FontFamily="Arial" Width="177" />
+        <Button Content="Gerar" Height="23" HorizontalAlignment="Right" Margin="0,358,2,0" x:Name="btnGenerate" VerticalAlignment="Top" Width="95" Click="btnGerar_Click" FontFamily="Arial" />
+        <TextBox Height="183" HorizontalAlignment="Left" Margin="28,159,0,0" x:Name="txtContent" VerticalAlignment="Top" Width="455" AcceptsReturn="True" Text="" FontFamily="Arial" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="173,123,0,0" x:Name="txtTitle" Text="" VerticalAlignment="Top" Width="285" MaxLength="50" FontFamily="Arial" />
+        <Label Content="Titulo da apresentação:" Height="28" HorizontalAlignment="Left" Margin="28,121,0,0" Name="lblTitulo" VerticalAlignment="Top" FontFamily="Arial" Width="135" />
+        <Label Content=".pptx" Height="28" HorizontalAlignment="Right" Margin="0,121,0,0" Name="lblPPTX" VerticalAlignment="Top" FontFamily="Arial" Width="36" Grid.ColumnSpan="2" />
+        <Label Content="Utilize quebras de linhas para dividir os slides da apresentação" Height="28" HorizontalAlignment="Left" Margin="28,357,0,0" x:Name="lblTitulo_Copy" VerticalAlignment="Top" FontFamily="Arial" Width="346" FontStyle="Italic" />
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFCBE1FF" Offset="0" />
+                <GradientStop Color="White" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</Window>
